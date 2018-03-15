@@ -1,0 +1,23 @@
+import app from .app
+import g, session from flask
+
+before request:
+    reset g.user to None
+    if 'user' in session and session['logged_in'] == true ->
+        set g.user to 'user'
+        set g.logged_in to true
+
+index:
+    if g.user and g.logged_in:
+        user = g.user
+        return render_template('index', user=user)
+    else:
+        return render_template('index')
+
+CardStacks:
+    if g.user and g.logged_in:
+        user = g.user
+        if request.
+    else:
+        error='you have to be logged in!'
+        return render_template('index', error=error)

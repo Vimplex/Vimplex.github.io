@@ -1,0 +1,91 @@
+{% extends "layouts/head_foot.html" %}
+
+
+    {% block indi_styles %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/index.css') }}">
+    {% endblock %}
+
+
+
+{% block title %}
+    <title>CardStacks</title>
+{% endblock %}
+
+{% block content %}
+    {% if user == 'Admin' %}
+    <div id="admin">
+        <form action="/add_apps" method="post">
+            <input type="url" name="url", placeholder="URL"><br>
+            <input type="text" name="title" placeholder="Title"><br>
+            <input type="text" name="subtitle" placeholder="subtitle"><br>
+            <textarea name="desc" id="admin_textarea" cols="30" rows="10"></textarea><br>
+            <button type="submit" name="s" value="s">Add</button>
+        </form>
+    </div>
+    {% endif %}
+    {% for app in apps %}
+    <div class="App" id="{{app['Name']}}">
+        <h2>
+            {{app['Name']}}
+        </h2><br>
+        <h5>
+            {{app['subtitle']}}
+        </h5><br>
+        <p>
+            {{app['description']}}    
+        </p>
+        <form action="{{app['url']}}" method="get">
+            <button type="submit" value="s">Start playing</button>
+        </form>
+    </div>
+
+    {% endfor %}
+    {% if last %}
+        {% if last|length == 1 %}
+            <div class="App" id="{{last[0]['Name']}}" style="grid-column:2">
+                <h2>
+                    {{last[0]['Name']}}
+                </h2><br>
+                <h5>
+                    {{last[0]['subtitle']}}
+                </h5><br>
+                <p>
+                    {{last[0]['description']}}    
+                </p>
+                <form action="{{last[0]['url']}}" method="get">
+                    <button type="submit" value="s">Start playing</button>
+                </form>
+            </div>
+        {% else %}
+            <div class="App" id="{{last[0]['Name']}}" style="grid-column:1">
+                <h2>
+                    {{last[0]['Name']}}
+                </h2><br>
+                <h5>
+                    {{last[0]['subtitle']}}
+                </h5><br>
+                <p>
+                    {{last[0]['description']}}    
+                </p>
+                <form action="{{last[0]['url']}}" method="get">
+                    <button type="submit" value="s">Start playing</button>
+                </form>
+            </div>
+            <div class="App" id="{{last[1]['Name']}}" style="grid-column:3">
+                <h2>
+                    {{last[1]['Name']}}
+                </h2><br>
+                <h5>
+                    {{last[1]['subtitle']}}
+                </h5><br>
+                <p>
+                    {{last[1]['description']}}    
+                </p>
+                <form action="{{last[1]['url']}}" method="get">
+                    <button type="submit" value="s">Start playing</button>
+                </form>
+            </div>
+        {% endif %}
+    {% endif %}
+    
+{% endblock %}

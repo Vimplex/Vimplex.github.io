@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/skeleton.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/setup.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/main.css') }}">
+    
+    {% block header_styles %}
+    {% endblock %}
+
+    {% block indi_styles %}
+    {% endblock %}
+
+    {% block title %}
+    {% endblock %}
+
+
+</head>
+<body>
+    <div id="header_wrapper">   <!-- css found in main.css -->
+        <header>       <!-- css found in main.css (basic setup) and header.css-->
+            {% block header %}
+            {% endblock %}
+        </header>
+    </div>
+
+    <div class="container" onclick="close_sl_forms()">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

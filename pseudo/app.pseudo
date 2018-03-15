@@ -1,0 +1,5 @@
+import Flask from flask
+
+initialize app as Flask object
+
+import all from views

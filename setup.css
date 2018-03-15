@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    margin:0;
+    padding:0;
+}
+body *{
+    display: inline-block;
+    text-align: center;
+    font-family: 'Railway', sans-serif;
+}
+
+
+/*== setting text elements ==*/
+
+/* for big, one-word headings*/
+h1{
+    font-size: 3.5em;
+    font-weight: 600;
+}
+/* simple heading */
+h2{
+    font-size: 2.5em;
+}
+/* small heading/ subtitle*/
+h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/*= used in-paragraph =*/
+
+/* emphasize by big letters */
+h4{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+/* same size as 'p', but bold */
+h5{
+    font-size: 1em;
+    font-weight: bold;
+}
+/* small letters */
+h6{
+    font-size: .8em;
+    font-weight: 100;
+}
+
+/* simple paragraph-text */
+p{
+    font-size: 1em;
+    font-weight: 200;
+}
+
+a{
+    color: #878584;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+
+}
+
+a:hover,
+a:focus{
+    color: #1C1C1B;
+}
+
+/*== setup form elements ==*/
+
+form{
+    margin: .5em auto;
+    width:100%;
+}
+
+input{
+    margin: .5em;
+    height: 1.5em;
+    border-radius: .1em;
+    padding: .25em;
+}
+
+button{
+    float: right;
+    padding: .35em .5em .35em .5em;
+
+    background-color: #C4C1BF;
+    color: #1C1C1B;
+
+    border-width: .1em;
+    border-radius: .1em;
+
+}
+
+button:hover,
+button:focus{
+    background-color: #1C1C1B;
+    color: #FFFAF9;
+}

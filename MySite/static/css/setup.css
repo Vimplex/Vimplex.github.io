@@ -1,0 +1,10 @@
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover,
+header a:focus{
+    color: #EDEDED;
+}
+
