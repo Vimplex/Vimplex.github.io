@@ -17,7 +17,22 @@
                 <h2>Vimplex</h2>
                 <h5>Code</h5>
             </div>
-        
+            <div id="loggin">
+                <a onclick="Login_form()">Login</a>
+                , or
+                <a onclick="Signup_form()">Signup</a>
+            </div>
+            <div id="log" style="display:none;">
+                
+                <form id='login' action="#">
+                    <input type="text" name="uid" id="log_uid" placeholder="Username">
+                    <input type="text" name="pwd" id="log_pwd" placeholder="Password">
+                    <br>
+                    <button type="submit" value="s" name="submit">Login</button>
+                </form>
+            </div>
+            
+            
         </header>
     </div>
     
@@ -32,6 +47,6 @@
             <a href="#">My Webapps</a> <!-- link to real personal/webapps site -->
         </div>
     </div>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

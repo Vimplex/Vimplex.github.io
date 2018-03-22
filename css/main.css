@@ -1,6 +1,9 @@
 
+
+
 #header_wrapper{
     height: 7em;
+    display: inline-block;
 }
 
 header{
@@ -14,6 +17,7 @@ header{
 #logo{
     padding: .75em; 
     width: 9.3em;
+    height: 5em;
     
 }
 #logo h2{
@@ -21,4 +25,51 @@ header{
 }
 #logo h5{
     text-align: right;
+}
+
+#loggin{
+    text-align: center;
+    
+    float: right;
+    transform: translateY(-4.3em);
+    color:white;
+    margin-right: 1.5em;
+    cursor: pointer;
+}
+
+
+
+#log{
+    padding-top: .75em;
+    position: absolute;
+    width:20em;
+    height:11em;
+    right: 0;
+    
+    text-align: center;
+    background-color: black;
+    z-index: 2;
+}
+
+#log button{
+    float: right;
+    margin: .5em 2em .5em 0;
+    color: white;
+}
+
+#log button:hover,
+#log button:focus{
+    color: black;
+    background-color: lightgray;
+}
+
+#log input{
+    margin: .5em auto;
+    color:black;
+    width: 85%;
+}
+
+.container{
+    position: relative;
+    z-index: -1;
 }
