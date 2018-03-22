@@ -1,7 +1,6 @@
-pip-sefcheck.json
 
-env/*
+env/
 
-.vscode/*
+.vscode/
 
 *.pyc
